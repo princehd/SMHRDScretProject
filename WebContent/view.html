@@ -14,7 +14,7 @@
 		var count=0;
 		for (var i = startMonth; i <= endMonth; i++) {
 			$('#month').append("<td colspan='"+(30+bigOrSmall[i-1])+"'>"+i+"</td>");
-			$('#lunch').append("<td colspan='"+(30+bigOrSmall[i-1])+"'>점심시간</td>");
+			$('.lunch').append("<td colspan='"+(30+bigOrSmall[i-1])+"'>점심시간</td>");
 			for (var j = 1; j <= (30+bigOrSmall[i-1]); j++) {
 				var redTorF = $.inArray(j,redDay[i-1]) != -1;
 				if(startWeek >= 6 || redTorF){
@@ -37,16 +37,20 @@
 					startWeek = 1;
 				}
 			}
-			$('#day :last-child').css("border-right","5px solid white");
+			$('#day :last-child').css("border-right","1px solid white");
 		}
 		$('table').css("width",(count+1)*25);	
 	});
 </script>
 <style type="text/css">
+	tbody{
+		border-bottom: 3px solid black;
+	}
 	table{
 		border-collapse: collapse;
 	}
 	td{
+		box-sizing:border-box;
 		text-align: center;
 	}
 	#month td{
@@ -55,7 +59,7 @@
 		background-color: gray;
 		opacity:0.5;
 		color: white;
-		border-right: 5px solid white;
+		border-right: 1px solid white;
 	}
 	.content td,#day td{
 		width:20px;
@@ -69,37 +73,155 @@
 <body>
 <table>
 	<tr id="month">
-		
+		<td rowspan="2" style="background-color: white; width:150px;"></td>
 	</tr>
 	<tr id="day">			
 	</tr>
-	<tr class="content">
-	
-	</tr>
-	<tr class="content">
-	
-	</tr>
-	<tr class="content">
-	
-	</tr>
-	<tr class="content">
-	
-	</tr>
-	<tr id="lunch">
+	<tbody>
+		<tr class="content">
+			<td rowspan="9" style="background-color: white; width:150px"></td>
+		</tr>
+		<tr class="content">
 		
-	</tr>
-	<tr class="content">
-	
-	</tr>
-	<tr class="content">
-	
-	</tr>
-	<tr class="content">
-	
-	</tr>
-	<tr class="content">
-	
-	</tr>
+		</tr>
+		<tr class="content">
+		
+		</tr>
+		<tr class="content">
+		
+		</tr>
+		<tr class="lunch">
+			
+		</tr>
+		<tr class="content">
+		
+		</tr>
+		<tr class="content">
+		
+		</tr>
+		<tr class="content">
+		
+		</tr>
+		<tr class="content">
+		
+		</tr>
+	</tbody>
+	<tbody>
+		<tr class="content">
+			<td rowspan="9" style="background-color: white; width:150px"></td>
+		</tr>
+		<tr class="content">
+		
+		</tr>
+		<tr class="content">
+		
+		</tr>
+		<tr class="content">
+		
+		</tr>
+		<tr class="lunch">
+			
+		</tr>
+		<tr class="content">
+		
+		</tr>
+		<tr class="content">
+		
+		</tr>
+		<tr class="content">
+		
+		</tr>
+		<tr class="content">
+		
+		</tr>
+	</tbody>
+		<tbody>
+		<tr class="content">
+			<td rowspan="9" style="background-color: white; width:150px"></td>
+		</tr>
+		<tr class="content">
+		
+		</tr>
+		<tr class="content">
+		
+		</tr>
+		<tr class="content">
+		
+		</tr>
+		<tr class="lunch">
+			
+		</tr>
+		<tr class="content">
+		
+		</tr>
+		<tr class="content">
+		
+		</tr>
+		<tr class="content">
+		
+		</tr>
+		<tr class="content">
+		
+		</tr>
+	</tbody>
+		<tbody>
+		<tr class="content">
+			<td rowspan="9" style="background-color: white; width:150px"></td>
+		</tr>
+		<tr class="content">
+		
+		</tr>
+		<tr class="content">
+		
+		</tr>
+		<tr class="content">
+		
+		</tr>
+		<tr class="lunch">
+			
+		</tr>
+		<tr class="content">
+		
+		</tr>
+		<tr class="content">
+		
+		</tr>
+		<tr class="content">
+		
+		</tr>
+		<tr class="content">
+		
+		</tr>
+	</tbody>
+		<tbody>
+		<tr class="content">
+			<td rowspan="9" style="background-color: white; width:150px"></td>
+		</tr>
+		<tr class="content">
+		
+		</tr>
+		<tr class="content">
+		
+		</tr>
+		<tr class="content">
+		
+		</tr>
+		<tr class="lunch">
+			
+		</tr>
+		<tr class="content">
+		
+		</tr>
+		<tr class="content">
+		
+		</tr>
+		<tr class="content">
+		
+		</tr>
+		<tr class="content">
+		
+		</tr>
+	</tbody>
 </table>
 </body>
 </html>
