@@ -39,16 +39,29 @@
 			}
 			$('#day :last-child').css("border-right","1px solid white");
 		}
-		$('table').css("width",(count+1)*25);	
+		$('table').css("width",(count+1)*25);
+		//$('.course').css("margin-top","57px");
+		
+		$("#index").click(function(){
+			alert("ggggg");
+			$(this).css("right","0px");
+		});
 	});
 </script>
 <style type="text/css">
-	tbody{
+	body{
+		margin:0px;
+		padding:0px;
+	}
+	.course tbody{
 		border-bottom: 3px solid black;
 	}
 	table{
 		border-collapse: collapse;
 	}
+	/* table#header{
+		border-bottom: 3px solid black;
+	} */
 	td{
 		box-sizing:border-box;
 		text-align: center;
@@ -68,160 +81,116 @@
 	.content td{
 		border: 1px solid black;
 	}
+	div#index{
+		position: fixed;
+		width:20%;
+		top: 0px;
+		bottom: 0px;
+		right: -18%;
+		background-color: black;
+	}
 </style>
 </head>
 <body>
-<table>
+<table id="header" style="top:0px; left:0px; background-color: white; z-index: 9999;">
 	<tr id="month">
 		<td rowspan="2" style="background-color: white; width:150px;"></td>
 	</tr>
 	<tr id="day">			
 	</tr>
-	<tbody>
-		<tr class="content">
-			<td rowspan="9" style="background-color: white; width:150px"></td>
-		</tr>
-		<tr class="content">
-		
-		</tr>
-		<tr class="content">
-		
-		</tr>
-		<tr class="content">
-		
-		</tr>
-		<tr class="lunch">
-			
-		</tr>
-		<tr class="content">
-		
-		</tr>
-		<tr class="content">
-		
-		</tr>
-		<tr class="content">
-		
-		</tr>
-		<tr class="content">
-		
-		</tr>
-	</tbody>
-	<tbody>
-		<tr class="content">
-			<td rowspan="9" style="background-color: white; width:150px"></td>
-		</tr>
-		<tr class="content">
-		
-		</tr>
-		<tr class="content">
-		
-		</tr>
-		<tr class="content">
-		
-		</tr>
-		<tr class="lunch">
-			
-		</tr>
-		<tr class="content">
-		
-		</tr>
-		<tr class="content">
-		
-		</tr>
-		<tr class="content">
-		
-		</tr>
-		<tr class="content">
-		
-		</tr>
-	</tbody>
-		<tbody>
-		<tr class="content">
-			<td rowspan="9" style="background-color: white; width:150px"></td>
-		</tr>
-		<tr class="content">
-		
-		</tr>
-		<tr class="content">
-		
-		</tr>
-		<tr class="content">
-		
-		</tr>
-		<tr class="lunch">
-			
-		</tr>
-		<tr class="content">
-		
-		</tr>
-		<tr class="content">
-		
-		</tr>
-		<tr class="content">
-		
-		</tr>
-		<tr class="content">
-		
-		</tr>
-	</tbody>
-		<tbody>
-		<tr class="content">
-			<td rowspan="9" style="background-color: white; width:150px"></td>
-		</tr>
-		<tr class="content">
-		
-		</tr>
-		<tr class="content">
-		
-		</tr>
-		<tr class="content">
-		
-		</tr>
-		<tr class="lunch">
-			
-		</tr>
-		<tr class="content">
-		
-		</tr>
-		<tr class="content">
-		
-		</tr>
-		<tr class="content">
-		
-		</tr>
-		<tr class="content">
-		
-		</tr>
-	</tbody>
-		<tbody>
-		<tr class="content">
-			<td rowspan="9" style="background-color: white; width:150px"></td>
-		</tr>
-		<tr class="content">
-		
-		</tr>
-		<tr class="content">
-		
-		</tr>
-		<tr class="content">
-		
-		</tr>
-		<tr class="lunch">
-			
-		</tr>
-		<tr class="content">
-		
-		</tr>
-		<tr class="content">
-		
-		</tr>
-		<tr class="content">
-		
-		</tr>
-		<tr class="content">
-		
-		</tr>
-	</tbody>
 </table>
+<table class="course">
+	<tbody>
+		<tr class="content">
+			<td rowspan="9" style="background-color: white; width:150px"></td>
+		</tr>
+		<tr class="content">
+		
+		</tr>
+		<tr class="content">
+		
+		</tr>
+		<tr class="content">
+		
+		</tr>
+		<tr class="lunch">
+			
+		</tr>
+		<tr class="content">
+		
+		</tr>
+		<tr class="content">
+		
+		</tr>
+		<tr class="content">
+		
+		</tr>
+		<tr class="content">
+		
+		</tr>
+	</tbody>
+	<tbody>
+		<tr class="content">
+			<td rowspan="9" style="background-color: white; width:150px"></td>
+		</tr>
+		<tr class="content">
+		
+		</tr>
+		<tr class="content">
+		
+		</tr>
+		<tr class="content">
+		
+		</tr>
+		<tr class="lunch">
+			
+		</tr>
+		<tr class="content">
+		
+		</tr>
+		<tr class="content">
+		
+		</tr>
+		<tr class="content">
+		
+		</tr>
+		<tr class="content">
+		
+		</tr>
+	</tbody>
+		<tbody>
+		<tr class="content">
+			<td rowspan="9" style="background-color: white; width:150px"></td>
+		</tr>
+		<tr class="content">
+		
+		</tr>
+		<tr class="content">
+		
+		</tr>
+		<tr class="content">
+		
+		</tr>
+		<tr class="lunch">
+			
+		</tr>
+		<tr class="content">
+		
+		</tr>
+		<tr class="content">
+		
+		</tr>
+		<tr class="content">
+		
+		</tr>
+		<tr class="content">
+		
+		</tr>
+	</tbody>
+
+</table>
+<div id="index">
+	
+</div>
 </body>
 </html>
