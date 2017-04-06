@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script src="jquery-3.2.0.min.js"></script>
+<script type="text/javascript">
+	var startMonth = 4;
+	var endMonth = 12;
+	var bigOrSmall = [1,0,1,0,1,0,1,1,0,1,0,1];
+	var startWeek = 6;
+	var redDay = [[],[],[],[],[3,4,5,9],[6],[],[15],[],[3,4,5,6,9],[],[25]];
+	$(document).ready(function(){
+		var count=0;
+		for (var i = startMonth; i <= endMonth; i++) {
+			$('#month').append("<td colspan='"+(30+bigOrSmall[i-1])+"'>"+i+"</td>");
+			$('#lunch').append("<td colspan='"+(30+bigOrSmall[i-1])+"'>점심시간</td>");
+			for (var j = 1; j <= (30+bigOrSmall[i-1]); j++) {
+				var redTorF = $.inArray(j,redDay[i-1]) != -1;
+				if(startWeek >= 6 || redTorF){
+					var obj = $("<td>"+j+"</td>");
+					var obj2 = $("<td></td>");
+					if(startWeek === 6)
+						obj.css("color","blue");
+					else if(startWeek === 7 || redTorF)
+						obj.css("color","red");
+					obj2.css({"opacity":"0.5","background-color":"gray"});
+					$('#day').append(obj);
+					$('.content').append(obj2);
+				}else{
+					$('#day').append("<td>"+j+"</td>")
+					$('.content').append("<td></td>")
+				}
+				count++;
+				startWeek++;
+				if(startWeek>7){
+					startWeek = 1;
+				}
+			}
+			$('#day :last-child').css("border-right","5px solid white");
+		}
+		$('table').css("width",(count+1)*25);	
+	});
+</script>
+<style type="text/css">
+	table{
+		border-collapse: collapse;
+	}
+	td{
+		text-align: center;
+	}
+	#month td{
+		font-size: 24px;
+		font-weight: bolder;
+		background-color: gray;
+		opacity:0.5;
+		color: white;
+		border-right: 5px solid white;
+	}
+	.content td,#day td{
+		width:20px;
+		height: 20px;
+	}
+	.content td{
+		border: 1px solid black;
+	}
+</style>
+</head>
+<body>
+<table>
+	<tr id="month">
+		
+	</tr>
+	<tr id="day">			
+	</tr>
+	<tr class="content">
+	
+	</tr>
+	<tr class="content">
+	
+	</tr>
+	<tr class="content">
+	
+	</tr>
+	<tr class="content">
+	
+	</tr>
+	<tr id="lunch">
+		
+	</tr>
+	<tr class="content">
+	
+	</tr>
+	<tr class="content">
+	
+	</tr>
+	<tr class="content">
+	
+	</tr>
+	<tr class="content">
+	
+	</tr>
+</table>
+</body>
+</html>
